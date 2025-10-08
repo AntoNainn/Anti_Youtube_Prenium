@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/Anti_Youtube_Preniumsw.js', { scope: '/Anti_Youtube_Prenium' })})}
