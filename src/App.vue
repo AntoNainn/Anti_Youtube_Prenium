@@ -45,6 +45,7 @@ export default {
   },
   async mounted() {
     await this.refresh()
+    console.log("test");
   }
 }
 </script>
