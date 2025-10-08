@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import { VitePWA } from 'vite-plugin-pwa'
 
-const BASE = '/Anti_Youtube_Premium'
+const BASE = '/Anti_Youtube_Premium/'
 
 // https://vite.dev/config/
 export default defineConfig({
