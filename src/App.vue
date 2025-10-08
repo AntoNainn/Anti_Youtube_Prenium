@@ -11,7 +11,7 @@
         <AudioPlayer :src="t.blobUrl" />
       </li>
     </ul>
-    <UpdateToast ref="updater" />
+    <UpdatePrompt />
   </main>
 </template>
 
@@ -19,11 +19,11 @@
 import InstallButton from './components/InstallButton.vue'
 import AudioPlayer from './components/AudioPlayer.vue'
 import { addTrack, listTracks } from './db'
-import UpdateToast from './components/UpdateToast.vue';
+import UpdatePrompt from './components/UpdatePrompt.vue'
 
 export default {
   name: 'App',
-  components: { InstallButton, AudioPlayer, UpdateToast },
+  components: { InstallButton, AudioPlayer, UpdatePrompt },
   data() {
     return { 
       tracks: [] 
@@ -45,12 +45,6 @@ export default {
   },
   async mounted() {
     await this.refresh()
-    // Connecte le toast au cycle SW
-    const comp = this.$refs.updater
-    setupPWAUpdater((accept) => {
-      // onNeedRefresh → afficher le toast; "accept" déclenche l’update
-      comp.show(accept)
-    })
   }
 }
 </script>

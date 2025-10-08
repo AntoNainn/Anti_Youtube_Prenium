@@ -14,7 +14,6 @@ export default defineConfig({
     vue(),
     VitePWA({
       base: BASE, // place le SW sous /REPO_NAME/sw.js
-      registerType: 'autoUpdate',
       manifest: {
         name: 'Ma PWA Vue',
         short_name: 'PWA Vue',
@@ -29,7 +28,8 @@ export default defineConfig({
         ]
       },
       registerType: 'autoUpdate',
-      workbox: { globPatterns: ['**/*.{js,css,html,ico,png,svg,mp3}'] }
+      workbox: { globPatterns: ['**/*.{js,css,html,ico,png,svg,mp3}'] },
+      devOptions: { enabled: false }
     }),
     vueDevTools(),
   ],
