@@ -3,7 +3,7 @@
     <h1>Anti Youtube Prenium</h1>
     <InstallButton />
     <p>
-      <input type="file" accept="audio/*" @change="importFile" />
+      <input type="file"   accept="audio/*,.m4a,.mp3,.aac,.wav,.flac,.ogg" @change="importFile" />
     </p>
     <ul>
       <li v-for="t in tracks" :key="t.id">
@@ -23,7 +23,9 @@ export default {
   name: 'App',
   components: { InstallButton, AudioPlayer },
   data() {
-    return { tracks: [] }
+    return { 
+      tracks: [] 
+    }
   },
   methods: {
     async refresh() {
