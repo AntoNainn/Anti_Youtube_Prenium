@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>Anti Youtube Prenium</h1>
+    <h1>Anti Youtube Premium</h1>
     <InstallButton />
     <p>
       <input type="file"   accept="audio/*,.m4a,.mp3,.aac,.wav,.flac,.ogg" @change="importFile" />
